@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1533.19 300.23">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #231f20;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-4 {
+        font-family: BitcoaTrial-Regular, 'Bitcoa Trial';
+        font-size: 43px;
+      }
+
+      .cls-5 {
+        font-family: AnekMalayalam-ExtraBold, 'Anek Malayalam';
+        font-size: 12px;
+        font-variation-settings: 'wght' 800, 'wdth' 100;
+        font-weight: 700;
+      }
+
+      .cls-8 {
+        stroke-width: 17px;
+      }
+
+      .cls-8, .cls-9 {
+        fill: none;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-9 {
+        stroke-width: 6px;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(103.12 273.01) rotate(1)"><tspan x="0" y="0">Hemanth</tspan><tspan class="cls-11" x="185.37" y="0">r</tspan><tspan x="205.06" y="0">aj</tspan></text>
+  <path class="cls-3" d="M214.03,214.18h-12.29v13.74h-6.37v-31.85h6.37v11.74h12.29"/>
+  <path class="cls-9" d="M209.69,205.51v-6.28h13.78c1.35,0,2.18,1.22,1.5,2.19l-8.9,8.4c-.7.99-.7,2.22,0,3.21l11.92,12.78"/>
+  <text class="cls-5" transform="translate(0 162.41)"><tspan class="cls-7" x="0" y="0">L</tspan><tspan x="6.05" y="0">o</tspan><tspan class="cls-10" x="12.72" y="0">r</tspan><tspan x="17.54" y="0">em i</tspan><tspan class="cls-6" x="40.58" y="0">p</tspan><tspan class="cls-2" x="47.5" y="0">s</tspan><tspan class="cls-1" x="53.15" y="0">um</tspan></text>
+  <path class="cls-3" d="M961.87,256.89h-38.75v43.34h-20.09v-100.46h20.09v37.03h38.75"/>
+  <path class="cls-8" d="M948.16,229.54v-19.79h43.45c4.24,0,6.88,3.85,4.74,6.9l-28.08,26.5c-2.19,3.12-2.2,6.99-.02,10.12l37.6,40.33"/>
+  <path class="cls-3" d="M1482.99,57.12h-38.75v43.34h-20.09V0h20.09v37.03h38.75"/>
+  <path class="cls-8" d="M1469.28,9.98h43.45c4.24,0,6.88,3.85,4.74,6.9l-28.08,26.5c-2.19,3.12-2.2,6.99-.02,10.12l37.6,40.33"/>
+</svg>
