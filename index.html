@@ -327,11 +327,21 @@ footer span{color:var(--light)}
 @media(max-width:900px){
   nav,footer{padding:14px 20px}
   .nav-ul{display:none}
-  .sec{padding:80px 20px}
+  .nav-wa{padding:8px 14px;font-size:9px}
+  .sec{padding:60px 20px}
   .intro-grid,.contact-grid{grid-template-columns:1fr}
   .intro-3d{margin-top:40px}
   .exp-grid{grid-template-columns:1fr}
   footer{flex-direction:column;gap:8px;text-align:center}
+  /* Projects */
+  #scene3d{padding:60px 20px}
+  .projects-grid{grid-template-columns:1fr !important}
+  /* Skills - stack columns */
+  .skills-flex{flex-direction:column !important;gap:40px !important}
+  /* Software icons responsive */
+  .software-grid{grid-template-columns:repeat(4,1fr) !important;gap:12px !important}
+  .software-grid > div{width:100% !important;height:auto !important;aspect-ratio:1 !important}
+  .software-grid img,.software-grid svg{width:36px !important;height:36px !important}
 }
 </style>
 </head>
@@ -459,7 +469,7 @@ footer span{color:var(--light)}
     <!-- Demo Reel button added here -->
     <a href="https://drive.google.com/drive/folders/1ZZuGk_6zxK802YojnsuYZ7awXgLACGgQ" target="_blank" class="btn btn-white" style="margin-bottom:32px;">▶ Demo Reel</a>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2;">
+  <div class="projects-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2;">
 
     <!-- Project 1 -->
     <div class="rv" style="border-radius:16px;overflow:hidden;background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);">
@@ -497,9 +507,9 @@ footer span{color:var(--light)}
           allow="autoplay" allowfullscreen></iframe>
       </div>
       <div style="padding:16px 20px;">
-        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#50e203;margin-bottom:6px;">Animated Action</div>
+        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#50e203;margin-bottom:6px;">Motion Graphic</div>
         <div style="font-size:18px;font-weight:700;color:#ffffff;margin-bottom:6px;">Web Series Trailer</div>
-        <div style="font-size:13px;color:#888;line-height:1.5;">High energy web series trailer with 3D Environment and visual effects.</div>
+        <div style="font-size:13px;color:#888;line-height:1.5;">High energy web series trailer with motion graphics and visual effects.</div>
       </div>
     </div>
 
@@ -508,7 +518,7 @@ footer span{color:var(--light)}
 
 <!-- SKILLS + SOFTWARE -->
 <section id="skills" class="sec">
-  <div style="display:flex;gap:60px;align-items:flex-start;">
+  <div class="skills-flex" style="display:flex;gap:60px;align-items:flex-start;">
 
     <!-- LEFT — Skills -->
     <div style="flex:1;">
@@ -526,7 +536,7 @@ footer span{color:var(--light)}
     <div style="flex:1;">
       <div class="sec-tag">Expertise</div>
       <h2 class="sec-h">Software</h2>
-      <div style="display:grid;grid-template-columns:repeat(4,100px);gap:20px;">
+      <div class="software-grid" style="display:grid;grid-template-columns:repeat(4,100px);gap:20px;">
         <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <svg viewBox="0 0 100 100" style="width:44px;height:44px;"><rect width="100" height="100" rx="14" fill="#00005b"/><text x="50" y="63" text-anchor="middle" font-family="Arial Black" font-weight="900" font-size="34" fill="#9999FF">Pr</text></svg>
         </div>
