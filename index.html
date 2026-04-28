@@ -15,7 +15,7 @@
   --light:#aaaaaa;
   --off-white:#f0ede8;
   --white:#50e203;
-  --paper:#939292;
+  --paper:#ede8e0;
   --border-dark:rgba(255,255,255,.1);
   --border-light:rgba(0,0,0,.12);
   --shadow:0 4px 24px rgba(0,0,0,.18);
@@ -336,12 +336,19 @@ footer span{color:var(--light)}
   /* Projects */
   #scene3d{padding:60px 20px}
   .projects-grid{grid-template-columns:1fr !important}
-  /* Skills - stack columns */
-  .skills-flex{flex-direction:column !important;gap:40px !important}
-  /* Software icons responsive */
-  .software-grid{grid-template-columns:repeat(4,1fr) !important;gap:12px !important}
-  .software-grid > div{width:100% !important;height:auto !important;aspect-ratio:1 !important}
+  /* Skills - stack columns and center */
+  .skills-flex{flex-direction:column !important;gap:40px !important;align-items:center !important}
+  .skills-flex > div{width:100% !important;text-align:center}
+  .sk-top{justify-content:center !important;gap:12px}
+  .sk-track{max-width:100%}
+  /* Software icons - center grid */
+  .software-grid{grid-template-columns:repeat(4,64px) !important;gap:12px !important;justify-content:center !important}
+  .software-grid > div{width:64px !important;height:64px !important}
   .software-grid img,.software-grid svg{width:36px !important;height:36px !important}
+  /* Center skills & software headings */
+  #skills .sec-tag{justify-content:center}
+  #skills .sec-h{text-align:center}
+  .sk-name{text-align:left}
 }
 </style>
 </head>
@@ -396,8 +403,8 @@ footer span{color:var(--light)}
     <div class="intro-body">
       <div class="sec-tag">About</div>
       <h2 class="sec-h">The Artist<br/>Behind the Frame</h2>
-      <p>I'm <strong>Hemanth Raj K S</strong> a Motion Graphics Artist and Visual Designer based in Bangalore, with 4+ years of experience across the post-production pipeline.</p>
-      <p>I specialize in crafting engaging motion content, cinematic edits, and real time visuals using Unreal Engine. <em>"My key project, Saanjh,"</em> is a fully animated series built in <strong>Unreal Engine</strong> with Metahuman characters and Rokoko motion capture where I handled environment creation, asset integration, and cinematic sequence delivery.</p>
+      <p>I'm <strong>Hemanth Raj K S</strong> — a Motion Graphics Artist and Visual Designer based in Bangalore, with 4+ years of experience across the post-production pipeline.</p>
+      <p>I specialize in crafting engaging motion content, cinematic edits, and real-time visuals using Unreal Engine. <em>"My key project, Saanjh,"</em> — is a fully animated series built in <strong>Unreal Engine</strong> with Metahuman characters and Rokoko motion capture — where I handled environment creation, asset integration, and cinematic sequence delivery.</p>
       <p>Currently at <strong>Oy Media Solutions</strong>, actively seeking my next creative challenge.</p>
       <div class="intro-stats">
         <div class="i-stat rv"><div class="i-stat-n">4+</div><div class="i-stat-l">Years Exp</div></div>
@@ -507,9 +514,9 @@ footer span{color:var(--light)}
           allow="autoplay" allowfullscreen></iframe>
       </div>
       <div style="padding:16px 20px;">
-        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#50e203;margin-bottom:6px;">3D animated </div>
+        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#50e203;margin-bottom:6px;">Motion Graphic</div>
         <div style="font-size:18px;font-weight:700;color:#ffffff;margin-bottom:6px;">Web Series Trailer</div>
-        <div style="font-size:13px;color:#888;line-height:1.5;">High energy web series trailer with 3D Environment and visual effects.</div>
+        <div style="font-size:13px;color:#888;line-height:1.5;">High energy web series trailer with motion graphics and visual effects.</div>
       </div>
     </div>
 
