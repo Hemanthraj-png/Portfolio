@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
 :root{
   --black:#080808;
   --off-black:#111111;
@@ -26,36 +25,9 @@
   --fm:'Space Mono',monospace;
 }
 
-sw-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: 100px; /* limits to 4 icons per row */
-}
-
-.sw-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 20px);
-  gap: 12px;
-  align-items: center;
-}
-
-.sw.rv svg {
-  width: 20px;
-  height: 55px;
-}
-
-.sw.rv img {
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--off-white);font-family:var(--fb);overflow-x:hidden}
 
-/* ── GLOBAL GRAIN OVERLAY ── */
 body::before{
   content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
   opacity:.038;
@@ -68,7 +40,7 @@ body::before{
   60%{background-position:-40px -20px}80%{background-position:50px 40px}100%{background-position:-10px 10px}
 }
 
-/* ── NAV ── */
+/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   padding:18px 60px;display:flex;justify-content:space-between;align-items:center;
@@ -90,15 +62,13 @@ nav{
 }
 .nav-wa:hover{background:var(--off-white);transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,255,255,.15)}
 
-/* ══ HERO ══ */
+/* HERO */
 #hero{
   position:relative;height:100vh;
   overflow:hidden;display:flex;
   align-items:center;justify-content:center;
   background:var(--black);
 }
-
-/* Halftone texture on hero */
 #hero::before{
   content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
   background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);
@@ -106,17 +76,12 @@ nav{
   mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);
   -webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);
 }
-
-/* Vignette */
 #hero::after{
   content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
   background:radial-gradient(ellipse 90% 90% at 50% 50%,transparent 40%,rgba(0,0,0,.85) 100%);
 }
-
 #hero-canvas{position:absolute;inset:0;z-index:0}
-
 .hero-text{position:relative;z-index:3;text-align:center;padding:0 40px;max-width:900px}
-
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(255,255,255,.06);
@@ -128,7 +93,6 @@ nav{
 }
 .live-dot{width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 8px #fff;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.6);opacity:.5}}
-
 .hero-tagline{
   font-family:var(--fd);
   font-size:clamp(52px,9vw,130px);
@@ -151,23 +115,17 @@ nav{
   margin:16px 0;
   font-weight:400;
 }
-
 .hero-sub{
   font-size:14px;font-weight:300;color:var(--mid);
   margin-top:24px;letter-spacing:1px;
   animation:fadeUp .7s ease .55s both;
 }
-
 .hero-btns{display:flex;gap:12px;justify-content:center;margin-top:32px;animation:fadeUp .7s ease .65s both;flex-wrap:wrap}
-
-/* corner decorations */
 .hcorner{position:absolute;z-index:3;width:28px;height:28px;border-color:rgba(255,255,255,.2);border-style:solid}
 .hcorner.tl{top:28px;left:28px;border-width:1px 0 0 1px}
 .hcorner.tr{top:28px;right:28px;border-width:1px 1px 0 0}
 .hcorner.bl{bottom:28px;left:28px;border-width:0 0 1px 1px}
 .hcorner.br{bottom:28px;right:28px;border-width:0 1px 1px 0}
-
-/* scroll cue */
 .scroll-cue{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:3;text-align:center;animation:fadeUp .6s ease 1s both}
 .sc-line{width:1px;height:44px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);margin:8px auto 0;animation:scpulse 1.8s ease infinite}
 .sc-txt{font-family:var(--fm);font-size:9px;color:var(--mid);letter-spacing:3px;text-transform:uppercase}
@@ -200,18 +158,17 @@ nav{
 .tick-i em{opacity:1;font-style:normal;color:var(--mid)}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 .sec{padding:100px 60px;position:relative}
 .sec-tag{font-family:var(--fm);font-size:10px;letter-spacing:4px;color:var(--mid);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
 .sec-tag::before{content:'';width:20px;height:1px;background:currentColor}
 .sec-h{font-family:var(--fd);font-size:clamp(36px,4.5vw,64px);letter-spacing:1px;line-height:1.05;margin-bottom:56px}
 
-/* ── INTRO — paper texture bg ── */
+/* INTRO */
 #intro{
   background:var(--off-white);color:var(--black);
   position:relative;overflow:hidden;
 }
-/* Paper fiber texture */
 #intro::before{
   content:'';position:absolute;inset:0;pointer-events:none;opacity:.4;
   background-image:
@@ -239,7 +196,6 @@ nav{
   border:1px solid rgba(255,255,255,.08);
   position:relative;
 }
-/* subtle crosshatch on 3d wrap */
 .i3d-wrap::before{
   content:'';position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.04;
   background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);
@@ -251,9 +207,8 @@ nav{
   font-family:var(--fm);font-size:9px;color:var(--mid);letter-spacing:3px;text-transform:uppercase;white-space:nowrap;
 }
 
-/* ── EXPERIENCE ── */
+/* EXPERIENCE */
 #exp{background:var(--black);color:var(--off-white);position:relative;overflow:hidden}
-/* Diagonal stripe texture */
 #exp::before{
   content:'';position:absolute;inset:0;pointer-events:none;opacity:.025;
   background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 8px);
@@ -281,32 +236,23 @@ nav{
 .ec-ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .ec-ul li{font-size:13px;color:var(--mid);padding-left:16px;position:relative;line-height:1.65}
 .ec-ul li::before{content:'—';position:absolute;left:0;color:var(--mid);font-size:11px}
-.ec-ul li:hover{color:var(--off-white)}
 .ec-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
 .chip{font-family:var(--fm);font-size:9px;color:var(--light);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:3px 10px;border-radius:100px;letter-spacing:.5px}
 
-/* ── 3D SCENE ── */
+/* PROJECTS */
 #scene3d{
-  background:var(--off-black);position:relative;padding:80px 0;overflow:hidden;
+  background:var(--off-black);position:relative;padding:80px 60px;overflow:hidden;
 }
-/* Dot grid texture */
 #scene3d::before{
   content:'';position:absolute;inset:0;pointer-events:none;
   background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
   background-size:28px 28px;
 }
-.scene-header{text-align:center;padding:0 60px 24px;position:relative;z-index:2}
-.scene-header .sec-tag{justify-content:center;color:var(--mid)}
-.scene-header .sec-h{color:var(--white);margin-bottom:4px}
-.scene-hint{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:3px;text-align:center;padding-top:16px;text-transform:uppercase;animation:pulse2 2.5s ease infinite}
-@keyframes pulse2{0%,100%{opacity:.25}50%{opacity:.6}}
-#main3d{display:block;width:100%;max-width:1200px;margin:0 auto}
 
-/* ── SKILLS ── */
+/* SKILLS */
 #skills{
   background:var(--off-white);color:var(--black);position:relative;overflow:hidden;
 }
-/* Linen texture */
 #skills::before{
   content:'';position:absolute;inset:0;pointer-events:none;opacity:.35;
   background-image:
@@ -315,7 +261,6 @@ nav{
 }
 #skills .sec-tag{color:var(--mid)}
 #skills .sec-h{color:var(--black)}
-.sk-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;max-width:960px}
 .sk-item{margin-bottom:24px}
 .sk-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
 .sk-name{font-family:var(--fm);font-size:11px;letter-spacing:1px;color:var(--dark);font-weight:700;text-transform:uppercase}
@@ -323,26 +268,11 @@ nav{
 .sk-track{height:4px;background:rgba(0,0,0,.1);border-radius:100px;overflow:hidden}
 .sk-fill{height:100%;width:0;border-radius:100px;background:var(--black);transition:width 1.2s cubic-bezier(.4,0,.2,1)}
 
-/* SOFTWARE LOGOS */
-.sw-section-title{font-family:var(--fm);font-size:10px;letter-spacing:4px;color:var(--mid);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.sw-section-title::before{content:'';width:20px;height:1px;background:var(--mid)}
-.sw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.sw{
-  background:var(--white);border:1.5px solid rgba(0,0,0,.1);
-  border-radius:12px;padding:18px 12px;text-align:center;
-  transition:all .28s;box-shadow:0 2px 10px rgba(0,0,0,.06);
-}
-.sw:hover{border-color:var(--dark);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.12)}
-.sw svg{width:36px;height:36px;display:block;margin:0 auto 8px}
-.sw-n{font-family:var(--fm);font-size:9px;letter-spacing:1px;color:var(--mid);text-transform:uppercase}
-.sw:hover .sw-n{color:var(--black)}
-
-/* ── CONTACT ── */
+/* CONTACT */
 #contact{
   background:var(--black);color:var(--off-white);
   position:relative;overflow:hidden;
 }
-/* Concrete texture */
 #contact::before{
   content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
@@ -373,13 +303,10 @@ nav{
 .c-btn-val{font-size:13px;color:var(--white);font-weight:600}
 .c-btn-arr{font-size:18px;color:rgba(255,255,255,.2);transition:all .2s}
 .c-btn:hover .c-btn-arr{transform:translateX(4px);color:rgba(255,255,255,.6)}
-
-/* contact 3D canvas */
 #contact3d-wrap{
   background:var(--off-black);border:1px solid rgba(255,255,255,.08);border-radius:20px;
   overflow:hidden;height:380px;position:relative;
 }
-/* Horizontal rule texture on contact 3d */
 #contact3d-wrap::before{
   content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
   background-image:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(255,255,255,.02) 24px,rgba(255,255,255,.02) 25px);
@@ -405,10 +332,7 @@ footer span{color:var(--light)}
   .intro-grid,.contact-grid{grid-template-columns:1fr}
   .intro-3d{margin-top:40px}
   .exp-grid{grid-template-columns:1fr}
-  .sk-layout{grid-template-columns:1fr}
-  .sw-grid{grid-template-columns:repeat(3,1fr)}
   footer{flex-direction:column;gap:8px;text-align:center}
-  .hero-btns .btn:nth-child(3){display:none}
 }
 </style>
 </head>
@@ -417,7 +341,7 @@ footer span{color:var(--light)}
 <!-- NAV -->
 <nav id="nav">
   <a href="#hero" class="logo">
-  <img src="logo_3.svg" style="height:60px;width:auto;display:red-orange;">
+    <img src="logo_3.svg" style="height:60px;width:auto;display:block;">
   </a>
   <ul class="nav-ul">
     <li><a href="#intro">About</a></li>
@@ -431,14 +355,13 @@ footer span{color:var(--light)}
   </a>
 </nav>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section id="hero">
   <canvas id="hero-canvas"></canvas>
   <div class="hcorner tl"></div>
   <div class="hcorner tr"></div>
   <div class="hcorner bl"></div>
   <div class="hcorner br"></div>
-
   <div class="hero-text">
     <div class="hero-badge"><div class="live-dot"></div>Visual Artist · Open to Work</div>
     <h1 class="hero-tagline">
@@ -446,7 +369,7 @@ footer span{color:var(--light)}
       <span class="line-mid">HEMANTH RAJ K S</span>
       <span class="line-stroke">THAT LIVE.</span>
     </h1>
-    <p class="hero-sub">4+ Years · Bangalore · Motion Graphic · Video Editing </p>
+    <p class="hero-sub">4+ Years · Bangalore · Motion Graphic · Video Editing</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-white">↗ Hire Me</a>
       <a href="https://wa.me/919620270042?text=Hi%20Hemanth!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="btn btn-wa">
@@ -468,7 +391,7 @@ footer span{color:var(--light)}
 <!-- INTRO -->
 <section id="intro" class="sec">
   <div class="intro-grid">
-    <div>
+    <div class="intro-body">
       <div class="sec-tag">About</div>
       <h2 class="sec-h">The Artist<br/>Behind the Frame</h2>
       <p>I'm <strong>Hemanth Raj K S</strong> — a Motion Graphics Artist and Visual Designer based in Bangalore, with 4+ years of experience across the post-production pipeline.</p>
@@ -500,7 +423,7 @@ footer span{color:var(--light)}
   <div class="exp-grid">
     <div class="exp-card rv">
       <div class="ec-period"><span class="ec-curr">Current</span> Feb 2024 – Present</div>
-      <div class="ec-role">Visual Artist </div>
+      <div class="ec-role">Visual Artist</div>
       <div class="ec-co">Oy Media Solutions · Bangalore</div>
       <ul class="ec-ul">
         <li>Lead compositing on commercial and branded content</li>
@@ -535,23 +458,17 @@ footer span{color:var(--light)}
     </div>
   </div>
 </section>
-  
-  <!-- 3D SCENE -->
-<section id="scene3d">
-  <div class="scene-header">
-    <div class="sec-tag">Interactive</div>
-    <h2 class="sec-h">My Creative Space</h2>
 
 <!-- PROJECTS -->
-<section id="scene3d" class="sec" style="background:var(--off-black);">
-  <div style="text-align:center; margin-bottom:2.5rem;">
+<section id="scene3d" class="sec">
+  <div style="text-align:center;margin-bottom:2.5rem;position:relative;z-index:2;">
     <div class="sec-tag" style="justify-content:center;">Works</div>
     <h2 class="sec-h" style="color:var(--white);margin-bottom:0;">My Projects</h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2;">
 
-    <!-- Project 1 — Video Editing -->
-    <div style="border-radius:16px;overflow:hidden;background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);">
+    <!-- Project 1 -->
+    <div class="rv" style="border-radius:16px;overflow:hidden;background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);">
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
         <iframe src="https://drive.google.com/file/d/1ch230zytoA_BVKWOgmzsBdG0-Xnm61mR/preview"
           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
@@ -564,8 +481,8 @@ footer span{color:var(--light)}
       </div>
     </div>
 
-    <!-- Project 2 — Motion Graphic -->
-    <div style="border-radius:16px;overflow:hidden;background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);">
+    <!-- Project 2 -->
+    <div class="rv" style="border-radius:16px;overflow:hidden;background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);">
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
         <iframe src="https://drive.google.com/file/d/1bicDatw0BwDUAOTb3yGyTEbUBkwlfzdl/preview"
           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
@@ -578,8 +495,8 @@ footer span{color:var(--light)}
       </div>
     </div>
 
-    <!-- Project 3 — Motion Graphic -->
-    <div style="border-radius:16px;overflow:hidden;background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);">
+    <!-- Project 3 -->
+    <div class="rv" style="border-radius:16px;overflow:hidden;background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);">
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
         <iframe src="https://drive.google.com/file/d/1c0zyL3MSE27W7zw0s6k2e09lbPCmL9WX/preview"
           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
@@ -616,25 +533,25 @@ footer span{color:var(--light)}
       <div class="sec-tag">Expertise</div>
       <h2 class="sec-h">Software</h2>
       <div style="display:grid;grid-template-columns:repeat(4,64px);gap:12px;">
-        <div style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:var(--white);">
+        <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <svg viewBox="0 0 100 100" style="width:44px;height:44px;"><rect width="100" height="100" rx="14" fill="#00005b"/><text x="50" y="63" text-anchor="middle" font-family="Arial Black" font-weight="900" font-size="34" fill="#9999FF">Pr</text></svg>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:var(--white);">
+        <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <svg viewBox="0 0 100 100" style="width:44px;height:44px;"><rect width="100" height="100" rx="14" fill="#00005b"/><text x="50" y="63" text-anchor="middle" font-family="Arial Black" font-weight="900" font-size="34" fill="#9999FF">Ae</text></svg>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:var(--white);">
+        <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <svg viewBox="0 0 100 100" style="width:44px;height:44px;"><rect width="100" height="100" rx="14" fill="#001e36"/><text x="50" y="63" text-anchor="middle" font-family="Arial Black" font-weight="900" font-size="34" fill="#31A8FF">Ps</text></svg>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:var(--white);">
+        <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <svg viewBox="0 0 100 100" style="width:44px;height:44px;"><rect width="100" height="100" rx="14" fill="#330000"/><text x="50" y="63" text-anchor="middle" font-family="Arial Black" font-weight="900" font-size="34" fill="#FF9A00">Ai</text></svg>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:var(--white);">
+        <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <img src="nuke.png" alt="Nuke" style="width:44px;height:44px;object-fit:contain;">
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:var(--white);">
+        <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <img src="unreal-engine.png" alt="Unreal Engine" style="width:44px;height:44px;object-fit:contain;">
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:var(--white);">
+        <div class="rv" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#50e203;">
           <img src="blender.png" alt="Blender" style="width:44px;height:44px;object-fit:contain;">
         </div>
       </div>
@@ -649,7 +566,7 @@ footer span{color:var(--light)}
   <h2 class="sec-h">Hire Me</h2>
   <div class="contact-grid">
     <div class="contact-left">
-      <p>Looking for a Visual Arist, motion artist, or video editor? I'm actively seeking new opportunities. Reach out — I respond fast.</p>
+      <p>Looking for a Visual Artist, motion artist, or video editor? I'm actively seeking new opportunities. Reach out — I respond fast.</p>
       <div class="c-btns">
         <a href="https://wa.me/919620270042?text=Hi%20Hemanth!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="c-btn">
           <div class="c-btn-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
@@ -679,7 +596,7 @@ footer span{color:var(--light)}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-// ══ HERO CANVAS — flowing white ribbons on black ══
+// HERO CANVAS
 (function(){
   const c=document.getElementById('hero-canvas');
   const ctx=c.getContext('2d');
@@ -689,8 +606,7 @@ footer span{color:var(--light)}
   document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
   const lines=Array.from({length:14},(_,i)=>({
     phase:i*(Math.PI*2/14),amp:50+i*10,
-    freq:.0006+i*.00004,
-    a:.035+i*.004
+    freq:.0006+i*.00004,a:.035+i*.004
   }));
   function draw(){
     ctx.clearRect(0,0,c.width,c.height);
@@ -698,9 +614,7 @@ footer span{color:var(--light)}
     lines.forEach(l=>{
       ctx.beginPath();
       for(let x=0;x<=c.width;x+=3){
-        const y=c.height/2
-          +Math.sin(x*l.freq*3+t+l.phase+mxN*2)*l.amp*(1+myN)
-          +Math.cos(x*l.freq+t*.6+l.phase)*l.amp*.35;
+        const y=c.height/2+Math.sin(x*l.freq*3+t+l.phase+mxN*2)*l.amp*(1+myN)+Math.cos(x*l.freq+t*.6+l.phase)*l.amp*.35;
         x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
       }
       ctx.strokeStyle=`rgba(255,255,255,${l.a})`;ctx.lineWidth=1;ctx.stroke();
@@ -710,12 +624,12 @@ footer span{color:var(--light)}
   draw();
 })();
 
-// ── TICKER ──
+// TICKER
 const words=['VFX Compositor','Video Editor','Motion Graphics','Unreal Engine','After Effects','Nuke','Color Grading','Metahuman','Rokoko Mocap','Blender'];
 const dbl=[...words,...words];
 document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆</em> ${w}</span>`).join('');
 
-// ══ INTRO 3D — white gem on black, draggable ══
+// INTRO 3D
 (function(){
   const wrap=document.querySelector('.i3d-wrap');
   const c=document.getElementById('intro3d');
@@ -726,10 +640,6 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
   c.addEventListener('mousedown',e=>{drag=true;auto=false;lx=e.offsetX;ly=e.offsetY});
   window.addEventListener('mouseup',()=>{drag=false;setTimeout(()=>auto=true,2000)});
   c.addEventListener('mousemove',e=>{if(!drag)return;rotY+=(e.offsetX-lx)*.014;rotX+=(e.offsetY-ly)*.012;lx=e.offsetX;ly=e.offsetY});
-  c.addEventListener('touchstart',e=>{drag=true;auto=false;lx=e.touches[0].clientX;ly=e.touches[0].clientY},{passive:true});
-  window.addEventListener('touchend',()=>{drag=false;setTimeout(()=>auto=true,2000)});
-  c.addEventListener('touchmove',e=>{if(!drag)return;rotY+=(e.touches[0].clientX-lx)*.014;rotX+=(e.touches[0].clientY-ly)*.012;lx=e.touches[0].clientX;ly=e.touches[0].clientY},{passive:true});
-
   function proj(x,y,z){
     const W=c.width,H=c.height;
     const cx=Math.cos(rotX),sx=Math.sin(rotX),cy=Math.cos(rotY),sy=Math.sin(rotY);
@@ -738,13 +648,10 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
     const fov=420,s=fov/(fov+z3+4);
     return{x:x2*s+W/2,y:y2*s+H/2,z:z3,s};
   }
-
-  // Build icosahedron verts
   const tau=(1+Math.sqrt(5))/2;
   const raw=[[-1,tau,0],[1,tau,0],[-1,-tau,0],[1,-tau,0],[0,-1,tau],[0,1,tau],[0,-1,-tau],[0,1,-tau],[tau,0,-1],[tau,0,1],[-tau,0,-1],[-tau,0,1]];
   const verts=raw.map(([x,y,z])=>{const l=Math.hypot(x,y,z);return{x:x/l*1.2,y:y/l*1.2,z:z/l*1.2}});
   const faces=[[0,11,5],[0,5,1],[0,1,7],[0,7,10],[0,10,11],[1,5,9],[5,11,4],[11,10,2],[10,7,6],[7,1,8],[3,9,4],[3,4,2],[3,2,6],[3,6,8],[3,8,9],[4,9,5],[2,4,11],[6,2,10],[8,6,7],[9,8,1]];
-
   let tt=0;
   function draw(){
     const W=c.width,H=c.height;
@@ -754,7 +661,7 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
     const sc=1+Math.sin(tt)*.025;
     const sv=verts.map(v=>proj(v.x*sc,v.y*sc,v.z*sc));
     const sorted=faces.map((f,i)=>({f,i,z:f.reduce((s,vi)=>s+sv[vi].z,0)/3})).sort((a,b)=>a.z-b.z);
-    sorted.forEach(({f,i})=>{
+    sorted.forEach(({f})=>{
       const pts=f.map(vi=>sv[vi]);
       const avgZ=f.reduce((s,vi)=>s+sv[vi].z,0)/3;
       const brightness=Math.min(.85,Math.max(.08,(avgZ+2.5)/4));
@@ -762,18 +669,15 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
       ctx.fillStyle=`rgba(255,255,255,${brightness})`;ctx.fill();
       ctx.strokeStyle='rgba(0,0,0,.3)';ctx.lineWidth=.7;ctx.stroke();
     });
-    // glow
-    const g=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,130);
-    g.addColorStop(0,'rgba(255,255,255,.07)');g.addColorStop(1,'transparent');
-    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
     requestAnimationFrame(draw);
   }
   draw();
 })();
 
-// ══ THREE.JS MAIN SCENE — black & white ══
+// THREE.JS MAIN SCENE
 (function(){
   const canvas=document.getElementById('main3d');
+  if(!canvas)return;
   canvas.width=canvas.offsetWidth||window.innerWidth;
   canvas.height=500;
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
@@ -781,89 +685,33 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
   renderer.setSize(canvas.width,canvas.height);
   renderer.setClearColor(0x000000,0);
   renderer.shadowMap.enabled=true;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure=1.1;
   const scene=new THREE.Scene();
   scene.fog=new THREE.FogExp2(0x111111,.05);
   const camera=new THREE.PerspectiveCamera(50,canvas.width/canvas.height,.1,100);
   camera.position.set(0,3,9);camera.lookAt(0,0,0);
-
-  // Lights — white only
   scene.add(new THREE.AmbientLight(0xffffff,.3));
   const dir=new THREE.DirectionalLight(0xffffff,1.5);dir.position.set(5,10,5);dir.castShadow=true;scene.add(dir);
   const ptA=new THREE.PointLight(0xffffff,2,20);ptA.position.set(-4,4,2);scene.add(ptA);
   const ptB=new THREE.PointLight(0xdddddd,1.5,18);ptB.position.set(4,2,-3);scene.add(ptB);
-  const rimLight=new THREE.PointLight(0xffffff,1,15);rimLight.position.set(0,-2,5);scene.add(rimLight);
-
-  // Floor
   const floor=new THREE.Mesh(new THREE.PlaneGeometry(30,30),new THREE.MeshStandardMaterial({color:0x0d0d0d,roughness:.9,metalness:.05}));
   floor.rotation.x=-Math.PI/2;floor.position.y=-2;floor.receiveShadow=true;scene.add(floor);
-  const grid=new THREE.GridHelper(30,28,0x333333,0x1a1a1a);grid.position.y=-1.99;scene.add(grid);
-
-  // Materials — black, white, grey only
-  const matWhite=new THREE.MeshStandardMaterial({color:0xffffff,metalness:.85,roughness:.1,emissive:0x222222,emissiveIntensity:.1});
-  const matGrey=new THREE.MeshStandardMaterial({color:0x888888,metalness:.7,roughness:.2,emissive:0x111111,emissiveIntensity:.15});
-  const matDark=new THREE.MeshStandardMaterial({color:0x222222,metalness:.8,roughness:.15,emissive:0x000000});
+  scene.add(new THREE.GridHelper(30,28,0x333333,0x1a1a1a));
+  const matWhite=new THREE.MeshStandardMaterial({color:0xffffff,metalness:.85,roughness:.1});
+  const matGrey=new THREE.MeshStandardMaterial({color:0x888888,metalness:.7,roughness:.2});
+  const matDark=new THREE.MeshStandardMaterial({color:0x222222,metalness:.8,roughness:.15});
   const matWireW=new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:.09});
-  const matGlass=new THREE.MeshStandardMaterial({color:0xcccccc,metalness:.95,roughness:.02,transparent:true,opacity:.35});
-
   const objs=[];
-
-  // Center: octahedron
-  const oct=new THREE.Mesh(new THREE.OctahedronGeometry(1.4,0),matWhite);
-  oct.position.set(0,.5,0);oct.castShadow=true;scene.add(oct);
-  const octW=new THREE.Mesh(new THREE.OctahedronGeometry(1.6,0),matWireW);
-  octW.position.copy(oct.position);scene.add(octW);
+  const oct=new THREE.Mesh(new THREE.OctahedronGeometry(1.4,0),matWhite);oct.position.set(0,.5,0);oct.castShadow=true;scene.add(oct);
+  const octW=new THREE.Mesh(new THREE.OctahedronGeometry(1.6,0),matWireW);octW.position.copy(oct.position);scene.add(octW);
   objs.push({m:oct,ry:.01,rx:.006},{m:octW,ry:.013,rx:.005});
-
-  // Left: torus knot
-  const tk=new THREE.Mesh(new THREE.TorusKnotGeometry(.7,.2,80,16),matGrey);
-  tk.position.set(-3.5,.2,-.5);tk.castShadow=true;scene.add(tk);
+  const tk=new THREE.Mesh(new THREE.TorusKnotGeometry(.7,.2,80,16),matGrey);tk.position.set(-3.5,.2,-.5);tk.castShadow=true;scene.add(tk);
   objs.push({m:tk,ry:.018,rx:.009});
-
-  // Right: icosahedron
-  const ico=new THREE.Mesh(new THREE.IcosahedronGeometry(1.1,0),matDark);
-  ico.position.set(3.5,.3,-.5);ico.castShadow=true;scene.add(ico);
-  const icoW=new THREE.Mesh(new THREE.IcosahedronGeometry(1.25,0),matWireW);
-  icoW.position.copy(ico.position);scene.add(icoW);
-  objs.push({m:ico,ry:-.012,rx:.013},{m:icoW,ry:-.016,rx:.01});
-
-  // Far left: cone
-  const cone=new THREE.Mesh(new THREE.ConeGeometry(.55,1.4,6,1),matGlass);
-  cone.position.set(-6,.1,-.5);cone.castShadow=true;scene.add(cone);
-  objs.push({m:cone,ry:.02,rx:0});
-
-  // Far right: cylinder
-  const cyl=new THREE.Mesh(new THREE.CylinderGeometry(.45,.65,.9,6,1),matGrey);
-  cyl.position.set(6,.1,-.5);cyl.castShadow=true;scene.add(cyl);
-  objs.push({m:cyl,ry:-.015,rx:.005});
-
-  // Orbit rings
-  [1.9,2.45,3.0].forEach((r,i)=>{
-    const ring=new THREE.Mesh(new THREE.TorusGeometry(r,.018,8,80),new THREE.MeshBasicMaterial({color:i===0?0xffffff:0x888888,transparent:true,opacity:.2-i*.04}));
-    ring.rotation.x=Math.PI/2+i*.5;scene.add(ring);
-    objs.push({m:ring,ry:.004+i*.002,rx:.001});
-  });
-
-  // Floating micro spheres
-  [[-1.8,1.5,-.8],[1.9,1.7,-1],[-2.5,-.2,1.2],[2.5,-.1,1.4],[0,2,-1.5]].forEach((pos,i)=>{
-    const mat=new THREE.MeshStandardMaterial({color:i%2===0?0xffffff:0x888888,emissive:0xffffff,emissiveIntensity:.3,metalness:.9,roughness:.05});
-    const s=new THREE.Mesh(new THREE.SphereGeometry(.13,12,12),mat);
-    s.position.set(...pos);s.castShadow=true;scene.add(s);
-    objs.push({m:s,ry:.03,rx:.02});
-  });
-
-  // Drag
+  const ico=new THREE.Mesh(new THREE.IcosahedronGeometry(1.1,0),matDark);ico.position.set(3.5,.3,-.5);ico.castShadow=true;scene.add(ico);
+  objs.push({m:ico,ry:-.012,rx:.013});
   let isDrag=false,pX=0,pY=0,gY=0,gX=0,vX=0,vY=0;
   canvas.addEventListener('mousedown',e=>{isDrag=true;pX=e.clientX;pY=e.clientY});
   window.addEventListener('mouseup',()=>isDrag=false);
   canvas.addEventListener('mousemove',e=>{if(!isDrag)return;vX=(e.clientX-pX)*.004;vY=(e.clientY-pY)*.003;gY+=vX;gX+=vY;pX=e.clientX;pY=e.clientY});
-  canvas.addEventListener('wheel',e=>{camera.position.z=Math.max(3,Math.min(14,camera.position.z+e.deltaY*.01));e.preventDefault();},{passive:false});
-  canvas.addEventListener('click',()=>{oct.material=matGlass;setTimeout(()=>oct.material=matWhite,500)});
-  canvas.addEventListener('touchstart',e=>{isDrag=true;pX=e.touches[0].clientX;pY=e.touches[0].clientY},{passive:true});
-  window.addEventListener('touchend',()=>isDrag=false);
-  canvas.addEventListener('touchmove',e=>{if(!isDrag)return;vX=(e.touches[0].clientX-pX)*.004;vY=(e.touches[0].clientY-pY)*.003;gY+=vX;gX+=vY;pX=e.touches[0].clientX;pY=e.touches[0].clientY},{passive:true});
-
   let t=0;
   function animate(){
     requestAnimationFrame(animate);t+=.016;
@@ -871,10 +719,9 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
     objs.forEach(o=>{o.m.rotation.y+=o.ry;o.m.rotation.x+=o.rx;});
     oct.position.y=.5+Math.sin(t*.8)*.28;octW.position.copy(oct.position);
     tk.position.y=.2+Math.sin(t*1.1+1)*.22;
-    ico.position.y=.3+Math.sin(t*.9+2)*.24;icoW.position.copy(ico.position);
+    ico.position.y=.3+Math.sin(t*.9+2)*.24;
     ptA.position.x=Math.sin(t*.35)*6;ptA.position.z=Math.cos(t*.35)*6;
-    ptB.position.x=Math.sin(t*.28+Math.PI)*5;ptB.position.z=Math.cos(t*.28+Math.PI)*5;
-    const R=camera.position.z;
+    const R=camera.position.length();
     camera.position.x=Math.sin(gY)*R*Math.cos(gX);
     camera.position.z=Math.cos(gY)*R*Math.cos(gX);
     camera.position.y=Math.sin(gX)*R*.5+3;
@@ -882,10 +729,9 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
     renderer.render(scene,camera);
   }
   animate();
-  window.addEventListener('resize',()=>{canvas.width=canvas.offsetWidth;renderer.setSize(canvas.width,canvas.height);camera.aspect=canvas.width/canvas.height;camera.updateProjectionMatrix();});
 })();
 
-// ══ CONTACT 3D — white helix on dark ══
+// CONTACT 3D
 (function(){
   const wrap=document.getElementById('contact3d-wrap');
   const c=document.getElementById('contact3d');
@@ -911,30 +757,18 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
     const pts=Array.from({length:N},(_,i)=>{
       const a=(i/N)*Math.PI*4+t;
       const y=(i/N-.5)*4;
-      return{
-        a:proj(Math.cos(a)*1.1,y,Math.sin(a)*1.1),
-        b:proj(Math.cos(a+Math.PI)*1.1,y,Math.sin(a+Math.PI)*1.1),
-        i
-      };
+      return{a:proj(Math.cos(a)*1.1,y,Math.sin(a)*1.1),b:proj(Math.cos(a+Math.PI)*1.1,y,Math.sin(a+Math.PI)*1.1),i};
     });
-    // strands
     for(let i=0;i<pts.length-1;i++){
       [[pts[i].a,pts[i+1].a,.25],[pts[i].b,pts[i+1].b,.15]].forEach(([p1,p2,alpha])=>{
         ctx.beginPath();ctx.moveTo(p1.x,p1.y);ctx.lineTo(p2.x,p2.y);
         ctx.strokeStyle=`rgba(255,255,255,${alpha})`;ctx.lineWidth=1.5;ctx.stroke();
       });
-      if(i%3===0){
-        const alpha=.2+Math.sin(i*.4+t)*.1;
-        ctx.beginPath();ctx.moveTo(pts[i].a.x,pts[i].a.y);ctx.lineTo(pts[i].b.x,pts[i].b.y);
-        ctx.strokeStyle=`rgba(180,180,180,${alpha})`;ctx.lineWidth=1;ctx.stroke();
-      }
     }
-    // dots
-    pts.forEach((p,i)=>{
+    pts.forEach((p)=>{
       [[p.a,.7],[p.b,.45]].forEach(([pt,a])=>{
-        const al=a*(Math.sin(i*.25+t)*.2+.8);
         ctx.beginPath();ctx.arc(pt.x,pt.y,2.2*pt.s,0,Math.PI*2);
-        ctx.fillStyle=`rgba(255,255,255,${al})`;ctx.fill();
+        ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.fill();
       });
     });
     requestAnimationFrame(draw);
@@ -942,18 +776,18 @@ document.getElementById('tt').innerHTML=dbl.map(w=>`<span class="tick-i"><em>◆
   draw();
 })();
 
-// ── REVEAL ──
+// REVEAL
 const obs=new IntersectionObserver(e=>{
   e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('on');obs.unobserve(en.target)}});
 },{threshold:.1});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*.08+'s';obs.observe(el)});
 
-// ── SKILL BARS ──
+// SKILL BARS
 new IntersectionObserver(e=>{
   if(e[0].isIntersecting)document.querySelectorAll('.sk-fill').forEach(b=>{setTimeout(()=>b.style.width=b.dataset.w+'%',80)});
 },{threshold:.2}).observe(document.getElementById('skills'));
 
-// ── NAV ──
+// NAV
 window.addEventListener('scroll',()=>{
   let cur='';
   document.querySelectorAll('section[id]').forEach(s=>{if(scrollY>=s.offsetTop-200)cur=s.id});
