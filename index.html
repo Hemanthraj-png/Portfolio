@@ -26,16 +26,33 @@
   --fm:'Space Mono',monospace;
 }
 
-.sw.rv {
-  width: 68px;
-  height: 68px;
-  border-radius: 12px;
-}
-
 .sw-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  align-items: center;
+}
+
+.sw.rv {
+  width: 68px;
+  height: 68px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;  /* removes green box */
+  padding: 8px;
+}
+
+.sw.rv svg {
+  width: 48px;
+  height: 48px;
+}
+
+.sw.rv img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--off-white);font-family:var(--fb);overflow-x:hidden}
