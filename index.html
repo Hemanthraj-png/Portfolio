@@ -35,14 +35,11 @@ sw-grid {
   max-width: 100px; /* limits to 4 icons per row */
 }
 
-.sw.rv {
-  width: 75px;
-  height: 75px;
-  border-radius: 20px;
-  display: flex;
+.sw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 68px);
+  gap: 12px;
   align-items: center;
-  justify-content: center;
-  padding: 8px;
 }
 
 .sw.rv svg {
