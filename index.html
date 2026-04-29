@@ -41,11 +41,13 @@ body::before{
 }
 
 /* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:500;
-  padding:18px 60px;display:flex;justify-content:space-between;align-items:center;
-  background:rgba(8,8,8,.92);backdrop-filter:blur(24px);
-  border-bottom:1px solid var(--border-dark);
+.nav-wa{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;line-height:1;
+  background:var(--white);color:var(--black);
+  padding:8px 18px;border-radius:8px;
+  font-family:var(--fm);font-size:10px;letter-spacing:1px;
+  text-decoration:none;font-weight:700;
+  transition:all .25s;
 }
 .logo{font-family:var(--fd);font-size:20px;color:var(--white);text-decoration:none;letter-spacing:2px}
 .logo span{color:var(--light)}
